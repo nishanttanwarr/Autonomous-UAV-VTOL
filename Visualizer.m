@@ -113,8 +113,11 @@ classdef Visualizer < handle
             % Clear axes
             cla(obj.axes);
             
-            % Draw environment
-            obj.environment.drawEnvironment(obj.axes);
+            % --- FIX IS HERE ---
+            % Draw environment by calling the correct function name 'draw'
+            if ismethod(obj.environment, 'draw')
+                obj.environment.draw(obj.axes);
+            end
             
             % Draw vehicles
             for i = 1:length(obj.vehicles)

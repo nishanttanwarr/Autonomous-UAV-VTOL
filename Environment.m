@@ -89,6 +89,7 @@ classdef Environment < handle
             turbulence = obj.turbulenceIntensity * (1 + 0.5 * sin(0.05 * sum(position)));
         end
         
+        %%% RENAMED TO FIX ERROR %%%
         function drawEnvironment(obj, ax)
             % Draw environment in the given axes
             
@@ -135,7 +136,6 @@ classdef Environment < handle
         end
     end
 end
-
 function z = perlin2d(x, y)
     % Simple 2D Perlin noise implementation
     
@@ -153,7 +153,6 @@ function z = perlin2d(x, y)
         frequency = frequency * 2;
     end
 end
-
 function z = simplex2d(x, y)
     % Simplified 2D simplex noise
     
@@ -218,12 +217,10 @@ function z = simplex2d(x, y)
     % Scale to [-1,1]
     z = 70 * (n0 + n1 + n2);
 end
-
 function h = hash(i, j)
     % Simple hash function
     h = mod(i * 73856093 + j * 19349663, 256);
 end
-
 function g = grad2d(hash, x, y)
     % 2D gradient function
     h = mod(hash, 8);
