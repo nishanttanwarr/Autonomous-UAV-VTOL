@@ -45,7 +45,3 @@ It extends earlier simplified work by introducing **sensor uncertainty, environm
 - **Control System Toolbox** (LQR design, state-space modeling)
 - **Custom EKF Implementation**
 
-
-
-## 📂 Project Structure
-
